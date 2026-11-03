@@ -129,9 +129,9 @@ function triggerAppOpenAd() {
   const now = Date.now();
 
   if (now - lastOpenAd >= INAPP_AD_COOLDOWN_MS) {
-    if (typeof show_10555663 === 'function') {
+    if (typeof show_10337795 === 'function') {
       try {
-        show_10555663({
+        show_10337795({
           type: 'inApp',
           inAppSettings: {
             frequency: 2,
@@ -309,7 +309,7 @@ watchAdBtn.addEventListener('click', () => {
 
   // Step 1: Pop-Up Ad
   if (!popupAdWatched) {
-    if (typeof show_10555663 === 'function') {
+    if (typeof show_10337795 === 'function') {
       show_10555663('pop').then(() => {
         popupAdWatched = true;
         showToast('Pop-Up Ad verified! Now watch 3 Rewarded Interstitial Ads.', 'success');
@@ -329,7 +329,7 @@ watchAdBtn.addEventListener('click', () => {
 
   // Step 2: Rewarded Interstitial Ads
   if (rewardedAdsWatched < TOTAL_REWARDED_REQUIRED) {
-    if (typeof show_10555663 === 'function') {
+    if (typeof show_10337795 === 'function') {
       show_10555663().then(() => {
         handleRewardedSuccess();
       }).catch(() => {
