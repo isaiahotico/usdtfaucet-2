@@ -310,7 +310,7 @@ watchAdBtn.addEventListener('click', () => {
   // Step 1: Pop-Up Ad
   if (!popupAdWatched) {
     if (typeof show_10337795 === 'function') {
-      show_10555663('pop').then(() => {
+      show_10337795('pop').then(() => {
         popupAdWatched = true;
         showToast('Pop-Up Ad verified! Now watch 3 Rewarded Interstitial Ads.', 'success');
         updateAdProgressUI();
@@ -330,7 +330,7 @@ watchAdBtn.addEventListener('click', () => {
   // Step 2: Rewarded Interstitial Ads
   if (rewardedAdsWatched < TOTAL_REWARDED_REQUIRED) {
     if (typeof show_10337795 === 'function') {
-      show_10555663().then(() => {
+      show_10337795().then(() => {
         handleRewardedSuccess();
       }).catch(() => {
         handleRewardedSuccess();
